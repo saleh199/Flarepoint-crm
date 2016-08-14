@@ -10,6 +10,7 @@ use Config;
 use Dinero;
 use App\Settings;
 use Slack;
+use App\Events\NewClientIsRegistered;
 
 use App\Http\Requests\Client\StoreClientRequest;
 use App\Http\Requests\Client\UpdateClientRequest;
@@ -73,7 +74,8 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        Slack::to('#random')->send('DOES IT WORK?');
+        $test = Client::findOrFail(1);
+        event(new NewClientIsRegistered($test));
         return view('clients.create')
         ->withUsers($this->users->getAllUsersWithDepartments())
         ->withIndustries($this->clients->listAllIndustries());

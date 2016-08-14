@@ -1041,7 +1041,6 @@
                     "Maknz\\Slack\\Laravel\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -1056,7 +1055,10 @@
                 "laravel",
                 "slack"
             ],
-            "time": "2016-06-25 06:08:23"
+            "support": {
+                "source": "https://github.com/Bottelet/slack-laravel/tree/master"
+            },
+            "time": "2016-08-14 18:30:55"
         },
         {
             "name": "monolog/monolog",
