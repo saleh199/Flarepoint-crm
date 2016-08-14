@@ -152,6 +152,7 @@ return [
         PHPZen\LaravelRbac\RbacServiceProvider::class,
         Fenos\Notifynder\NotifynderServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Maknz\Slack\Laravel\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -214,6 +215,7 @@ return [
         'Carbon'     => Carbon\Carbon::class,
         'Notifynder' => Fenos\Notifynder\Facades\Notifynder::class,
         'Excel'     => Maatwebsite\Excel\Facades\Excel::class,
+        'Slack' => Maknz\Slack\Laravel\Facade::class,
         
     ],
 

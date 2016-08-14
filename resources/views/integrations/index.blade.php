@@ -3,7 +3,7 @@
 @section('content')
          
           <div class="row">
-           <h3>All Integrations</h3>
+           <h3>Billing Integrations</h3>
        <div class="col-sm-4">
 @foreach($check as $check)
 		@if($check->name == "Dinero")
@@ -55,6 +55,29 @@
 
 		{!! Form::close() !!}
 		     </div>
+</div>
+
+<div class="row">
+<hr>
+<h3>Communication Integrations</h3>
+        <div class="col-sm-4">
+ 
+    <img src="imagesIntegration/slack-logo.png" width="40%" align="center" alt="">
+    {!! Form::open([
+ 
+        ]) !!}
+  <div class="form-group">
+    {!! Form::label('api_key', 'Api Key:', ['class' => 'control-label']) !!}
+    {!! Form::text('api_key', null, ['class' => 'form-control']) !!}
+</div>
+
+
+ {!! Form::hidden('name', 'Billy') !!}
+{!! Form::hidden('api_type', 'billing') !!}
+        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+
+    {!! Form::close() !!}
+         </div>
 </div>
 
 	

@@ -10,6 +10,16 @@
     ],
     "license": "MIT",
     "type": "project",
+        "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bottelet/slack"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/bottelet/slack-laravel"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
@@ -19,7 +29,9 @@
         "guzzlehttp/guzzle": "^6.2",
         "pusher/pusher-php-server": "^2.3",
         "fenos/notifynder": "3.1.*",
-        "maatwebsite/excel": "~2.1.0"
+        "maatwebsite/excel": "~2.1.0",
+        "maknz/slack-laravel": "dev-master",
+        "maknz/slack": "dev-master"
         
     },
     "require-dev": {

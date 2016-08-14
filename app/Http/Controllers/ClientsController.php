@@ -9,6 +9,7 @@ use Datatables;
 use Config;
 use Dinero;
 use App\Settings;
+use Slack;
 
 use App\Http\Requests\Client\StoreClientRequest;
 use App\Http\Requests\Client\UpdateClientRequest;
@@ -72,6 +73,7 @@ class ClientsController extends Controller
      */
     public function create()
     {
+        Slack::to('#random')->send('DOES IT WORK?');
         return view('clients.create')
         ->withUsers($this->users->getAllUsersWithDepartments())
         ->withIndustries($this->clients->listAllIndustries());
